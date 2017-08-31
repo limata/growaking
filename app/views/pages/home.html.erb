@@ -4,3 +4,7 @@
 <p>Now is <%= Time.now %><p>
 
 <p>Now is 20XX-XX-XX XX:XX:XX +0000</p>
+
+<% Post.all.reverse.each do |post| %>
+  <h3><%= post.title %> </h3>
+<% end %>
