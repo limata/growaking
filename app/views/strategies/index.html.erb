@@ -2,6 +2,8 @@
 <p>Find me in app/views/strategies/strategy.html.erb</p>
 
 <% @posts.reverse.each do |post| %>
-  <h3><%= post.id %> </h3>
-  <h3><%= post.category %> </h3>
+  <%= link_to post_path(post), class: 'card-link' do %>
+    <h3><%= post.id %> </h3>
+    <h3><%= post.category %> </h3>
+  <% end %>
 <% end %>
